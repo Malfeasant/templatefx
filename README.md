@@ -1,0 +1,1 @@
+A Template for JavaFX applications.  Uses Maven Shade plugin to create a fat jar (.jar file including all the JavaFX .dlls and such)
