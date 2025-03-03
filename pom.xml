@@ -8,6 +8,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.release>21</maven.compiler.release>
+        <mainModuleClass>us.malfeasant.templatefx/us.malfeasant.templatefx.App</mainModuleClass>
         <mainClass>us.malfeasant.templatefx.Launch</mainClass>
         <javafx.version>21</javafx.version>
     </properties>
@@ -86,7 +87,9 @@
                     <execution>
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>${mainClass}</mainClass>
+                            <mainClass>${mainModuleClass}</mainClass>
+                            <jlinkImageName>${project.artifactId}</jlinkImageName>
+                            <launcher>launcher</launcher>
                         </configuration>
                     </execution>
                 </executions>
