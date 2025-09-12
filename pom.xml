@@ -89,7 +89,8 @@
                         <configuration>
                             <mainClass>${mainModuleClass}</mainClass>
                             <jlinkImageName>${project.artifactId}</jlinkImageName>
-                            <launcher>launcher</launcher>
+                            <jlinkZipName>${project.artifactId}</jlinkZipName>
+                            <launcher>${project.artifactId}</launcher>
                         </configuration>
                     </execution>
                 </executions>
