@@ -9,6 +9,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.release>21</maven.compiler.release>
         <mainClass>us.malfeasant.templatefx.Launch</mainClass>
+        <mainModuleClass>us.malfeasant.templatefx/us.malfeasant.templatefx.App</mainModuleClass>
         <javafx.version>21</javafx.version>
     </properties>
 
@@ -56,7 +57,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.13.0</version>
+                <version>3.14.0</version>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -86,7 +87,10 @@
                     <execution>
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>${mainClass}</mainClass>
+                            <mainClass>${mainModuleClass}</mainClass>
+                            <jlinkImageName>${project.artifactId}</jlinkImageName>
+                            <jlinkZipName>${project.artifactId}</jlinkZipName>
+                            <launcher>${project.artifactId}</launcher>
                         </configuration>
                     </execution>
                 </executions>
